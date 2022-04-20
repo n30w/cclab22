@@ -1,0 +1,66 @@
+/*https://blog.hubspot.com/website/css-fade-in
+* Fade-in Code taken from above website
+*/
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #212121;
+}
+
+p {
+  color: #f4faf2;
+  font-size: 16px;
+  animation: fadeIn ease-in-out 2.5s;
+}
+
+h1 {
+  font-style: oblique;
+  color: #f4faf2;
+  animation: fadeIn ease-out 1s;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+	justify-content: center;
+  align-items: center;
+}
+
+.flex-child {
+  display: block;
+  word-wrap: break-word;
+  /*background-color: green;*/
+  width: 300px;
+	height: 800px;
+	margin: 10px;
+  padding: 20px;
+}
+
+#centerpiece {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#jsscript {
+  display: block;
+  word-wrap: break-word;
+  /*background-color: green;*/
+  width: 800px;
+	height: 800px;
+	margin: 10px;
+  padding: 20px;
+  animation: fadeIn ease-in 1s;
+}

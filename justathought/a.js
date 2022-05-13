@@ -18,6 +18,7 @@ class A extends Scene {
         ];
     }
     display() {
+        if(this.mc == 0) this.update(this.#titles[0]);
         if(this.mc == this.sn+(this.ns)) this.update(this.#titles[1]);
         if(this.mc == this.sn+(this.ns * 2)) this.update(this.#titles[2]);
         if(this.mc == this.sn+(this.ns * 3)) this.update(this.#titles[3]);

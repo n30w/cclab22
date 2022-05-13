@@ -36,7 +36,6 @@ function preload() {
   vo4x2 = loadSound('sounds/vo4.2.mp3');
   vo4x3 = loadSound('sounds/vo4.3.mp3');
 }
-
 function setup() {
   let canvas = createCanvas(windowDim, windowDim, WEBGL);
   canvas.parent("jsscript");
@@ -51,12 +50,10 @@ function setup() {
   ];
   for(let i = 0; i < scenes.length; i++) {scenes[i].load();}
 }
-
 function draw() {
   scenes[mc%ns].mc = mc;
   scenes[mc%ns].display();
 }
-
 function doot(mc, s, sound) { // Play sound function
   if(mc == s) {
     sound.loop();
@@ -64,7 +61,6 @@ function doot(mc, s, sound) { // Play sound function
     sound.stop();
   }
 }
-
 function soundtrack(mc, s, sound) {
   if(mc == s) {
     sound.loop();
@@ -72,7 +68,6 @@ function soundtrack(mc, s, sound) {
     sound.stop();
   }
 }
-
 function playOnce(mc, s, sound) {
   if(mc == s) {
     sound.play();
@@ -80,7 +75,6 @@ function playOnce(mc, s, sound) {
     sound.stop();
   }
 }
-
 function mousePressed() {
   mc += 1;
   console.log(mc);
@@ -95,9 +89,12 @@ function mousePressed() {
   playOnce(mc, 9, vo4x1);
   soundtrack(mc, 9, pass3x2);
   playOnce(mc, 10, vo4x2);
-
   playOnce(mc, 11, vo4x3);
   
-  if(mc==12) {noLoop();}
+  if(mc==12) {
+    frameCount = 0;
+    mc = 0;
+
+  }
 }
 

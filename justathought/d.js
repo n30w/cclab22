@@ -19,6 +19,9 @@ class D extends Scene {
         pop();
     }
     update() {
+        if(this.mc == this.sn) {
+            this.#f.div = 100;
+        }
         if(this.mc == this.sn+(this.ns)) {
             this.#f.div = 30;
             this.#f.drawCircle();
